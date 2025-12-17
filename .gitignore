@@ -1,2 +1,4 @@
 # Ignore the TrainEnv folder and everything inside
 TrainEnv/
+TestEnv/
+.conda/
