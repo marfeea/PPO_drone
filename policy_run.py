@@ -8,8 +8,8 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecTransposeImage
 
 # Get train environment configs
 with open('scripts/config.yml', 'r') as f:
-    env_config = yaml.safe_load(f)
-
+    env_config = yaml.safe_load(f)  
+print("open the config")
 # Create a DummyVecEnv
 env = DummyVecEnv([lambda: Monitor(
     gym.make(
@@ -19,10 +19,10 @@ env = DummyVecEnv([lambda: Monitor(
         env_config=env_config["TrainEnv"]
     )
 )])
-
+print("creat env")
 # Wrap env as VecTransposeImage (Channel last to channel first)
 env = VecTransposeImage(env)
-
+print("createing model")
 # Load an existing model
 model = PPO.load(env=env, path="saved_policy\ppo_navigation_policy")
 

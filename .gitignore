@@ -2,3 +2,5 @@
 TrainEnv/
 TestEnv/
 .conda/
+TestEnv/
+TrainEnv/
