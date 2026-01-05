@@ -35,6 +35,11 @@
 - 训练 SAC: `python train_sac.py`
 - 运行推理: 启动 `TrainEnv.exe` 后执行 `python policy_run.py`
 
+## 测试推理 
+用参数选择推理的策略，方法
+`python policy_run.py --policy {ppo|sac|dqn} --ckpt path_to_saved_policy --run_item N [--frame_stack K] [--test_env]`
+
 ## 依赖与设置
 - 需要在 `Documents/AirSim/settings.json` 按 README 配置 (50x50 RGB, ClockSpeed 20, SimpleFlight)。
 - 建议 Python 3.8，使用 `pip install -r requirements.txt` 安装 Stable Baselines3、Gym、AirSim 客户端等依赖。
+

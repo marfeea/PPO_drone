@@ -5,6 +5,10 @@ from stable_baselines3 import PPO
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.vec_env import DummyVecEnv, VecTransposeImage
 
+from argparse import ArgumentParser
+
+parser = ArgumentParser()
+parser.add_argument("--policy", )
 
 # Get train environment configs
 with open('scripts/config.yml', 'r') as f:
